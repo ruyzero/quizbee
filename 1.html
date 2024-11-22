@@ -1,0 +1,485 @@
+<div class="row">
+  <div>
+    <div class="d-flex justify-content-center align-items-center">
+      <a href="question2.html">
+        <button class="pushable">
+          <span class="shadow"></span>
+          <span class="edge"></span>
+          <span class="front">⏳</span>
+        </button>
+      </a>
+
+      <a href="">
+        <button class="pushables text-center mx-3" onclick="wrongAnswer()">
+          <span class="shadow"></span>
+          <span class="edge"></span>
+          <span class="front">X</span>
+        </button>
+      </a>
+
+      <!-- Reset Button -->
+      <a href="">
+        <button class="pushables mx-3" id="reset-button">
+          <span class="shadow"></span>
+          <span class="edge"></span>
+          <span class="front">⭕</span>
+        </button>
+      </a>
+
+      <!-- Next Question Button -->
+      <a href="question2.html">
+        <button class="pushable">
+          <span class="shadow"></span>
+          <span class="edge"></span>
+          <span class="front"> NEXT LEVEL </span>
+        </button>
+      </a>
+    </div>
+
+    <!-- Audio Control (Centered) -->
+    <div class="row align-content-center justify-content-center">
+      <div class="col"></div>
+      <div class="col text-center">
+        <audio controls autoplay hidden>
+          <source src="song.mp3" />
+        </audio>
+      </div>
+      <div class="col"></div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="row align-items-center align-content-center align-items-lg-center p-0 mt-auto mb-auto"
+>
+  <div class="col-2">
+    <div class="inputbox">
+      <div class="input-group input-group-sm mb-1">
+        <input class="custom-input" type="number" id="team1-input" />
+        <span id="inputGroup-sizing-sm" class="span">1</span>
+      </div>
+      <div class="d-flex justify-content-center p-0">
+        <button
+          type="button"
+          class="btn btn-outline-primary d-flex justify-content-center align-items-center mx-auto"
+          onclick="updateScore('team1')"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            fill="currentColor"
+            class="bi bi-plus-circle"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"
+            />
+            <path
+              d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
+            />
+          </svg>
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-danger d-flex justify-content-center align-items-center mx-1"
+          onclick="clearScore('team1')"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            fill="currentColor"
+            class="bi bi-trash-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"
+            />
+          </svg>
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-success d-flex justify-content-center align-items-center mx-2"
+          onclick="revertScore('team1')"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            fill="currentColor"
+            class="bi bi-arrow-counterclockwise"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2z"
+            />
+            <path
+              d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="col-2">
+    <div class="inputbox">
+      <div class="input-group input-group-sm mb-1">
+        <input class="custom-input" type="number" id="team2-input" />
+        <span id="inputGroup-sizing-sm" class="span">2</span>
+      </div>
+      <div class="d-flex justify-content-center p-0">
+        <button
+          type="button"
+          class="btn btn-outline-primary d-flex justify-content-center align-items-center mx-auto"
+          onclick="updateScore('team2')"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            fill="currentColor"
+            class="bi bi-plus-circle"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"
+            />
+            <path
+              d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
+            />
+          </svg>
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-danger d-flex justify-content-center align-items-center mx-1"
+          onclick="clearScore('team2')"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            fill="currentColor"
+            class="bi bi-trash-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"
+            />
+          </svg>
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-success d-flex justify-content-center align-items-center mx-2"
+          onclick="revertScore('team2')"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            fill="currentColor"
+            class="bi bi-arrow-counterclockwise"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2z"
+            />
+            <path
+              d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-2">
+    <div class="inputbox">
+      <div class="input-group input-group-sm mb-1">
+        <input class="custom-input" type="number" id="team3-input" />
+        <span id="inputGroup-sizing-sm" class="span">3</span>
+      </div>
+      <div class="d-flex justify-content-center p-0">
+        <button
+          type="button"
+          class="btn btn-outline-primary d-flex justify-content-center align-items-center mx-auto"
+          onclick="updateScore('team3')"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            fill="currentColor"
+            class="bi bi-plus-circle"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"
+            />
+            <path
+              d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
+            />
+          </svg>
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-danger d-flex justify-content-center align-items-center mx-1"
+          onclick="clearScore('team3')"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            fill="currentColor"
+            class="bi bi-trash-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"
+            />
+          </svg>
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-success d-flex justify-content-center align-items-center mx-2"
+          onclick="revertScore('team3')"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            fill="currentColor"
+            class="bi bi-arrow-counterclockwise"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2z"
+            />
+            <path
+              d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-2">
+    <div class="inputbox">
+      <div class="input-group input-group-sm mb-1">
+        <input class="custom-input" type="number" id="team4-input" />
+        <span id="inputGroup-sizing-sm" class="span">4</span>
+      </div>
+      <div class="d-flex justify-content-center p-0">
+        <button
+          type="button"
+          class="btn btn-outline-primary d-flex justify-content-center align-items-center mx-auto"
+          onclick="updateScore('team4')"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            fill="currentColor"
+            class="bi bi-plus-circle"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"
+            />
+            <path
+              d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
+            />
+          </svg>
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-danger d-flex justify-content-center align-items-center mx-1"
+          onclick="clearScore('team4')"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            fill="currentColor"
+            class="bi bi-trash-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"
+            />
+          </svg>
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-success d-flex justify-content-center align-items-center mx-2"
+          onclick="revertScore('team4')"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            fill="currentColor"
+            class="bi bi-arrow-counterclockwise"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2z"
+            />
+            <path
+              d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-2">
+    <div class="inputbox">
+      <div class="input-group input-group-sm mb-1">
+        <input class="custom-input" type="number" id="team5-input" />
+        <span id="inputGroup-sizing-sm" class="span">5</span>
+      </div>
+      <div class="d-flex justify-content-center p-0">
+        <button
+          type="button"
+          class="btn btn-outline-primary d-flex justify-content-center align-items-center mx-auto"
+          onclick="updateScore('team5')"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            fill="currentColor"
+            class="bi bi-plus-circle"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"
+            />
+            <path
+              d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
+            />
+          </svg>
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-danger d-flex justify-content-center align-items-center mx-1"
+          onclick="clearScore('team5')"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            fill="currentColor"
+            class="bi bi-trash-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"
+            />
+          </svg>
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-success d-flex justify-content-center align-items-center mx-2"
+          onclick="revertScore('team5')"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            fill="currentColor"
+            class="bi bi-arrow-counterclockwise"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2z"
+            />
+            <path
+              d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-2">
+    <div class="inputbox">
+      <div class="input-group input-group-sm mb-1">
+        <input class="custom-input" type="number" id="team6-input" />
+        <span id="inputGroup-sizing-sm" class="span">6</span>
+      </div>
+      <div class="d-flex justify-content-center p-0">
+        <button
+          type="button"
+          class="btn btn-outline-primary d-flex justify-content-center align-items-center mx-auto"
+          onclick="updateScore('team6')"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            fill="currentColor"
+            class="bi bi-plus-circle"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"
+            />
+            <path
+              d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
+            />
+          </svg>
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-danger d-flex justify-content-center align-items-center mx-1"
+          onclick="clearScore('team6')"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            fill="currentColor"
+            class="bi bi-trash-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"
+            />
+          </svg>
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-success d-flex justify-content-center align-items-center mx-2"
+          onclick="revertScore('team6')"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            fill="currentColor"
+            class="bi bi-arrow-counterclockwise"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2z"
+            />
+            <path
+              d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

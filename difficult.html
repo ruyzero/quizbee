@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GAME START</title>
+    <link rel="stylesheet" href="difficult.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link
+      href="https://fonts.cdnfonts.com/css/venite-adoremus?styles=172794,172795"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div
+          class="col-2 d-flex flex-column align-items-center align-content-center align-items-lg-center p-0"
+        >
+          <div
+            class="team-card align-items-center align-content-center p-0 mb-3 mt-5"
+            id="lightBulbCard1"
+          >
+            <h2>TEAM 1</h2>
+            <div id="team1-scoreboard" style="font-size: 3em">
+              <span id="team1-score">0</span>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div
+          class="col-8 d-flex flex-column justify-content-center align-items-center vh-100"
+        >
+          <div
+            class="container h-100 d-flex flex-column justify-content-center align-items-center"
+          >
+            <div class="swiper swiper-container">
+              <div class="timer-container">
+                <div class="timer" id="timer">15</div>
+              </div>
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="question-card text-center">
+                    <h1>Difficult</h1>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="question-card p-2 text-center">
+                    <h1>Top Hotels in the World</h1>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="question-card text-center">
+                    <h6>
+                      "Top 6 answers on the board. According to a review in
+                      2022, what are the world's top 10 hotel group based on
+                      number of locations?"
+                    </h6>
+                    <div class="d-flex flex-wrap justify-content-center mt-3">
+                      <!-- Flippable Cards -->
+                      <div class="flippable-card mx-2 my-2">
+                        <div class="flippable-inner">
+                          <div class="card-front"></div>
+                          <div class="card-back">
+                            Jin Jiang International - 35
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flippable-card mx-2 my-2">
+                        <div class="flippable-inner">
+                          <div class="card-front"></div>
+                          <div class="card-back">
+                            Wyndham Hotels & Resorts - 20
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flippable-card mx-2 my-2">
+                        <div class="flippable-inner">
+                          <div class="card-front"></div>
+                          <div class="card-back">
+                            Marriott International - 15
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flippable-card mx-2 my-2">
+                        <div class="flippable-inner">
+                          <div class="card-front"></div>
+                          <div class="card-back">
+                            H World Group Limited - 12
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flippable-card mx-2 my-2">
+                        <div class="flippable-inner">
+                          <div class="card-front"></div>
+                          <div class="card-back">Huazhu Hotels Group - 10</div>
+                        </div>
+                      </div>
+                      <div class="flippable-card mx-2 my-2">
+                        <div class="flippable-inner">
+                          <div class="card-front"></div>
+                          <div class="card-back">
+                            Choice Hotels International - 8
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="question-card text-center">
+                    <h6>
+                      "Top 8 answers on the board. According to Hotels.com
+                      Amenities Survey, what are the most common amenities
+                      offered in a hotel?"l
+                    </h6>
+                    <div class="d-flex flex-wrap justify-content-center mt-3">
+                      <!-- Flippable Cards -->
+                      <div class="flippable-card mx-2 my-2">
+                        <div class="flippable-inner">
+                          <div class="card-front"></div>
+                          <div class="card-back">Wifi - 25</div>
+                        </div>
+                      </div>
+                      <div class="flippable-card mx-2 my-2">
+                        <div class="flippable-inner">
+                          <div class="card-front"></div>
+                          <div class="card-back">Breakfast - 20</div>
+                        </div>
+                      </div>
+                      <div class="flippable-card mx-2 my-2">
+                        <div class="flippable-inner">
+                          <div class="card-front"></div>
+                          <div class="card-back">Parking - 15</div>
+                        </div>
+                      </div>
+                      <div class="flippable-card mx-2 my-2">
+                        <div class="flippable-inner">
+                          <div class="card-front"></div>
+                          <div class="card-back">Swimming Pool - 15</div>
+                        </div>
+                      </div>
+                      <div class="flippable-card mx-2 my-2">
+                        <div class="flippable-inner">
+                          <div class="card-front"></div>
+                          <div class="card-back">Fitness Center - 10</div>
+                        </div>
+                      </div>
+                      <div class="flippable-card mx-2 my-2">
+                        <div class="flippable-inner">
+                          <div class="card-front"></div>
+                          <div class="card-back">Room Service - 8</div>
+                        </div>
+                      </div>
+                      <div class="flippable-card mx-2 my-2">
+                        <div class="flippable-inner">
+                          <div class="card-front"></div>
+                          <div class="card-back">Pet Friendly - 5</div>
+                        </div>
+                      </div>
+                      <div class="flippable-card mx-2 my-2">
+                        <div class="flippable-inner">
+                          <div class="card-front"></div>
+                          <div class="card-back">Business Center - 2</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="question-card text-center">
+                    <h1>
+                      Top Lost and Found Hotel Items that are Normally Not
+                      Claimed
+                    </h1>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="question-card text-center">
+                    <h6>
+                      "Top 10 answers on the board. According to Hotel Guest
+                      Satisfaction Survey, what are the top lost and found hotel
+                      items that are normally not claimed from departing
+                      guests?"
+                    </h6>
+                    <div class="d-flex flex-wrap justify-content-center mt-3">
+                      <!-- Flippable Cards -->
+                      <div class="flippable-card mx-2 my-2">
+                        <div class="flippable-inner">
+                          <div class="card-front"></div>
+                          <div class="card-back">Clothing - 25</div>
+                        </div>
+                      </div>
+                      <div class="flippable-card mx-2 my-2">
+                        <div class="flippable-inner">
+                          <div class="card-front"></div>
+                          <div class="card-back">Chargers - 20</div>
+                        </div>
+                      </div>
+                      <div class="flippable-card mx-2 my-2">
+                        <div class="flippable-inner">
+                          <div class="card-front"></div>
+                          <div class="card-back">Books / Magazines - 15</div>
+                        </div>
+                      </div>
+                      <div class="flippable-card mx-2 my-2">
+                        <div class="flippable-inner">
+                          <div class="card-front"></div>
+                          <div class="card-back">Towels - 10</div>
+                        </div>
+                      </div>
+                      <div class="flippable-card mx-2 my-2">
+                        <div class="flippable-inner">
+                          <div class="card-front"></div>
+                          <div class="card-back">Toiletries - 8</div>
+                        </div>
+                      </div>
+                      <div class="flippable-card mx-2 my-2">
+                        <div class="flippable-inner">
+                          <div class="card-front"></div>
+                          <div class="card-back">Jewelry - 7</div>
+                        </div>
+                      </div>
+                      <div class="flippable-card mx-2 my-2">
+                        <div class="flippable-inner">
+                          <div class="card-front"></div>
+                          <div class="card-back">Eyeglasses/Sunglasses - 5</div>
+                        </div>
+                      </div>
+                      <div class="flippable-card mx-2 my-2">
+                        <div class="flippable-inner">
+                          <div class="card-front"></div>
+                          <div class="card-back">Umbrellas - 5</div>
+                        </div>
+                      </div>
+                      <div class="flippable-card mx-2 my-2">
+                        <div class="flippable-inner">
+                          <div class="card-front"></div>
+                          <div class="card-back">Electronic Devices - 3</div>
+                        </div>
+                      </div>
+                      <div class="flippable-card mx-2 my-2">
+                        <div class="flippable-inner">
+                          <div class="card-front"></div>
+                          <div class="card-back">Shoes - 2</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>  
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+
+          <div class="row mb-2">
+            <div
+              class="d-flex justify-content-center align-items-center align-content-center"
+            >
+              <div>
+                <button class="pushable mx-1" id="startButton">
+                  <span class="shadow"></span>
+                  <span class="edge"></span>
+                  <span class="front">⏳</span>
+                </button>
+
+                <button class="pushable mx-1" id="resetButton">
+                  <span class="shadow"></span>
+                  <span class="edge"></span>
+                  <span class="front">🕓</span>
+                </button>
+
+                <button
+                  class="pushables text-center mx-1"
+                  id="correctAnswerButton"
+                  onclick="correctAnswer()"
+                >
+                  <span class="shadow"></span>
+                  <span class="edge"></span>
+                  <span class="front">✅️</span>
+                </button>
+
+                <button
+                  class="pushables text-center mx-1"
+                  id="wrongAnswerButton"
+                  onclick="wrongAnswer()"
+                >
+                  <span class="shadow"></span>
+                  <span class="edge"></span>
+                  <span class="front">❌</span>
+                </button>
+
+
+              </div>
+
+              <!-- Audio Control (Centered) -->
+              <div class="row align-content-center justify-content-center">
+                <div class="col"></div>
+                <div class="col text-center">
+                  <audio controls autoplay hidden>
+                    <source src="song.mp3" />
+                  </audio>
+                </div>
+                <div class="col"></div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="row align-items-center align-content-center align-items-lg-center p-0 mt-auto mb-4"
+          >
+            <div class="col-2 mx-5">
+              <div class="inputbox">
+                <div class="input-group input-group-sm mb-1">
+                  <input class="custom-input" type="number" id="team1-input" />
+                  <span id="inputGroup-sizing-sm" class="span">1</span>
+                </div>
+                <div class="d-flex justify-content-center p-0">
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary d-flex justify-content-center align-items-center mx-auto"
+                    onclick="updateScore('team1')"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="10"
+                      height="10"
+                      fill="currentColor"
+                      class="bi bi-plus-circle"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"
+                      />
+                      <path
+                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-outline-danger d-flex justify-content-center align-items-center mx-1"
+                    onclick="clearScore('team1')"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="10"
+                      height="10"
+                      fill="currentColor"
+                      class="bi bi-trash-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-outline-success d-flex justify-content-center align-items-center mx-2"
+                    onclick="revertScore('team1')"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="10"
+                      height="10"
+                      fill="currentColor"
+                      class="bi bi-arrow-counterclockwise"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2z"
+                      />
+                      <path
+                        d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            
+
+            <div class="col-2">
+              <div class="inputbox">
+                <div class="input-group input-group-sm mb-1">
+                  <input class="custom-input" type="number" id="team4-input" />
+                  <span id="inputGroup-sizing-sm" class="span">2</span>
+                </div>
+                <div class="d-flex justify-content-center p-0">
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary d-flex justify-content-center align-items-center mx-auto"
+                    onclick="updateScore('team4')"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="10"
+                      height="10"
+                      fill="currentColor"
+                      class="bi bi-plus-circle"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"
+                      />
+                      <path
+                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-outline-danger d-flex justify-content-center align-items-center mx-1"
+                    onclick="clearScore('team4')"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="10"
+                      height="10"
+                      fill="currentColor"
+                      class="bi bi-trash-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-outline-success d-flex justify-content-center align-items-center mx-2"
+                    onclick="revertScore('team4')"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="10"
+                      height="10"
+                      fill="currentColor"
+                      class="bi bi-arrow-counterclockwise"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2z"
+                      />
+                      <path
+                        d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+        </div>
+            
+        </div>
+
+        <div
+          class="col-2 d-flex flex-column align-items-center align-content-center align-items-lg-center p-0"
+        >
+          <div
+            class="team-card p-4 text-center mb-3 mt-5"
+            id="lightBulbCard4"
+          >
+            <h2>TEAM 2</h2>
+            <div id="team1-scoreboard" style="font-size: 3em">
+              <span id="team4-score">0</span>
+            </div>
+          </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // Initialize team scores and last scores from localStorage or default to 0
+      let teamScores = JSON.parse(localStorage.getItem("teamScores")) || {
+        team1: 0,
+        team2: 0,
+        team3: 0,
+        team4: 0,
+        team5: 0,
+        team6: 0,
+      };
+
+      let lastScores = {
+        team1: 0,
+        team2: 0,
+        team3: 0,
+        team4: 0,
+        team5: 0,
+        team6: 0,
+      };
+
+      // Function to update the display from the stored scores
+      function updateScoreDisplay() {
+        for (const team in teamScores) {
+          const scoreElement = document.getElementById(`${team}-score`);
+          if (scoreElement) {
+            scoreElement.textContent = teamScores[team];
+          }
+        }
+      }
+
+      // Update a team's score and save to localStorage
+      function updateScore(team) {
+        const inputElement = document.getElementById(`${team}-input`);
+        const scoreElement = document.getElementById(`${team}-score`);
+
+        // Validate input
+        const points = parseInt(inputElement.value);
+        if (isNaN(points)) {
+          alert("Please enter a valid number");
+          inputElement.value = ""; // Clear invalid input
+          return;
+        }
+
+        // Store the last score before updating
+        lastScores[team] = teamScores[team];
+
+        // Update score and save to localStorage
+        teamScores[team] += points;
+        scoreElement.textContent = teamScores[team];
+        localStorage.setItem("teamScores", JSON.stringify(teamScores));
+
+        inputElement.value = ""; // Clear input field
+      }
+
+      // Clear a team's score and save to localStorage
+      function clearScore(team) {
+        // Store the last score before clearing
+        lastScores[team] = teamScores[team];
+
+        // Clear the score and update localStorage
+        teamScores[team] = 0;
+        document.getElementById(`${team}-score`).textContent = teamScores[team];
+        localStorage.setItem("teamScores", JSON.stringify(teamScores));
+      }
+
+      // Revert a team's score to the last value
+      function revertScore(team) {
+        teamScores[team] = lastScores[team];
+        document.getElementById(`${team}-score`).textContent = teamScores[team];
+        localStorage.setItem("teamScores", JSON.stringify(teamScores));
+      }
+
+      // On page load, update the scoreboard with stored scores
+      updateScoreDisplay();
+
+      let wrongAnswerCount = 0; // Initialize the count for wrong answers
+
+      // Function to play the buzzer sound
+      function playBuzzerSound() {
+        const audio = new Audio("buzzer-sound.mp3"); // Adjust the path if needed
+        audio.play().catch((error) => {
+          console.error("Error playing sound:", error);
+        });
+      }
+
+      // Function to handle wrong answer clicks
+      function handleWrongAnswer(button) {
+        if (wrongAnswerCount < 1) {
+          wrongAnswerCount++;
+          playBuzzerSound(); // Play the buzzer sound
+          button.classList.add("wrong"); // Change the button style to indicate it's been clicked
+
+          if (wrongAnswerCount === 1) {
+            disableWrongAnswerButtons(); // Disable buttons after 3 wrong answers
+          }
+        }
+      }
+
+      // Function to disable all wrong answer buttons
+      function disableWrongAnswerButtons() {
+        const buttons = document.querySelectorAll(
+          ".wrong-answer-buttons button"
+        );
+        buttons.forEach((button) => {
+          button.disabled = true;
+        });
+      }
+
+      // Add event listeners to all wrong answer buttons
+      const buttons = document.querySelectorAll(".wrong-answer-buttons button");
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => handleWrongAnswer(button));
+      });
+
+      function resetWrongAnswers() {
+        wrongAnswerCount = 0;
+        const buttons = document.querySelectorAll(
+          ".wrong-answer-buttons button"
+        );
+        buttons.forEach((button) => {
+          button.disabled = false;
+          button.classList.remove("wrong");
+        });
+      }
+
+      document
+        .getElementById("reset-button")
+        .addEventListener("click", resetWrongAnswers);
+
+      // On page load, set carousel to saved index
+      document.addEventListener("DOMContentLoaded", function () {
+        const carousel = document.getElementById("carouselExampleIndicators");
+        const storedIndex = localStorage.getItem("carouselIndex");
+
+        // Initialize to stored index if available
+        if (storedIndex) {
+          const carouselInstance = new bootstrap.Carousel(carousel);
+          carouselInstance.to(parseInt(storedIndex));
+        }
+
+        // Listen for slide events to store current index
+        carousel.addEventListener("slid.bs.carousel", function (event) {
+          localStorage.setItem("carouselIndex", event.to);
+        });
+      });
+    </script>
+    <script>
+      // Select all the cards and store them in an array
+      const card = [
+        document.getElementById("lightBulbCard1"),
+        document.getElementById("lightBulbCard2"),
+        document.getElementById("lightBulbCard3"),
+        document.getElementById("lightBulbCard4"),
+        document.getElementById("lightBulbCard5"),
+        document.getElementById("lightBulbCard6"),
+      ];
+
+      let glowing = true;
+
+      function toggleGlow() {
+        card.forEach((card) => {
+          if (glowing) {
+            card.style.boxShadow =
+              "0 0 15px rgba(255, 255, 0, 1), 0 0 30px rgba(255, 223, 0, 0.7)";
+          } else {
+            card.style.boxShadow = "0 0 20px rgba(255, 255, 0, 0.8)";
+          }
+        });
+        glowing = !glowing;
+      }
+
+      // Pulse the glow every second
+      setInterval(toggleGlow, 1000);
+
+      const swiper = new Swiper(".swiper", {
+        slidesPerView: 1,
+        spaceBetween: 1,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      // JavaScript for flipping effect
+      document.querySelectorAll(".flippable-card").forEach((card) => {
+        card.addEventListener("click", () => {
+          card.classList.toggle("flipped");
+        });
+      });
+
+      let countdown;
+      const timerDisplay = document.getElementById("timer");
+      const startButton = document.getElementById("startButton");
+      const resetButton = document.getElementById("resetButton");
+      let timeLeft = 15;
+
+      function startTimer() {
+        clearInterval(countdown);
+        countdown = setInterval(() => {
+          timeLeft--;
+          timerDisplay.textContent = timeLeft;
+          if (timeLeft <= 0) {
+            clearInterval(countdown);
+            playRoundOutSound(); // Play the sound when the timer rounds out
+          }
+        }, 1000);
+        startButton.disabled = true;
+      }
+      function playRoundOutSound() {
+        // Play the sound when the timer reaches 0
+        var audio = new Audio("timesup.mp3"); // Replace with your sound file path
+        audio.play();
+      }
+
+      function resetTimer() {
+        clearInterval(countdown);
+        timeLeft = 15;
+        timerDisplay.textContent = timeLeft;
+        startButton.disabled = false;
+      }
+
+      startButton.addEventListener("click", startTimer);
+      resetButton.addEventListener("click", resetTimer);
+      y;
+      function wrongAnswer() {
+        // Play the sound
+        var audio = new Audio("buzzer-sound.mp3"); // Replace with your sound file path
+        audio.play();
+      }
+      function correctAnswer() {
+        // Play the correct answer sound
+        var audio = new Audio("check.mp3"); // Replace with your sound file path
+        audio.play();
+
+        // Change button color to green
+        var button = document.getElementById("correctAnswerButton");
+        button.style.backgroundColor = "green";
+
+        // Optionally, change text color to white for better contrast
+        button.querySelector(".front").style.color = "white";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,548 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url("bg.svg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      background-size: contain;
+      /* For smaller screens, fit the image */
+    }
+  }
+  
+  .container-fluid {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Ensures the body fills the viewport */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    max-height: 100%;
+    max-width: 100%;
+  }
+  
+  .team-card {
+    height: 16rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 600px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 500px;
+    color: rgb(0, 0, 0);
+  }
+  
+  /* Style for buttons */
+  
+  .row .custom-btn {
+    font-size: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-radius: 10px;
+    width: 130px; /* Consistent width */
+    margin-top: 5px;
+  }
+  
+  /* Card background animation */
+  .card::before,
+  .team-card::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 50%;
+    background-image: linear-gradient(
+      180deg,
+      rgb(255, 230, 0),
+      rgb(251, 187, 13)
+    );
+    animation: rotBGimg 3s linear infinite;
+    transition: all 0.2s linear;
+  }
+  
+  @keyframes rotBGimg {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .card::after,
+  .team-card::after {
+    content: "";
+    position: absolute;
+    background: #f1e8dc;
+    inset: 5px;
+    border-radius: 15px;
+  }
+  
+  /* Style adjustments for text and buttons inside card */
+  .team-card h2 {
+    z-index: 1;
+    color: rgb(167, 35, 12);
+    font-size: 1.7em;
+    font-family: Ramaraja;
+    font-weight: 900;
+    margin-top: 20%;
+  }
+  
+  .team-card #team1-scoreboard,
+  .team-card #team2-scoreboard,
+  .team-card #team3-scoreboard,
+  .team-card #team4-scoreboard,
+  .team-card #team5-scoreboard,
+  .team-card #team6-scoreboard {
+    font-size: 1em;
+    margin-bottom: 10%;
+    font-family: arial;
+    font-weight: 900;
+    color: black;
+    z-index: 1;
+  }
+  
+  .custom-input {
+    background-color: #0a5a90; /* Background color */
+    padding: 3px 3px; /* Padding: px-4 py-3 */
+    outline: none; /* Remove outline */
+    width: 5.7rem; /* Width: w-[280px] */
+    color: white; /* Text color */
+    border-radius: 8px; /* Rounded corners: rounded-lg */
+    border: 2px solid #074273; /* Border style: border-2, border-[#2B3040] */
+    transition: border-color 0.1s ease-in-out;
+    padding-left: 0.6rem;
+  }
+  
+  .span {
+    background-color: #0a5a90;
+    border: 2px solid #074273;
+    border-radius: 8px;
+    padding: 3px 3px; /* Padding: px-4 py-3 */
+    outline: none; /* Remove outline */
+    width: 1.5rem;
+    color: #000000;
+    font-weight: bold;
+    font-size: medium;
+  }
+  .custom-input:focus {
+    border-color: #596a95; /* Focus border color: focus:border-[#596A95] */
+  }
+  
+  .inputbox button {
+    z-index: 1;
+    width: 20%;
+    margin-top: 3px;
+    padding: 3px;
+  }
+  
+  .inputbox {
+    width: 7.9rem; /* Box width */
+    height: 4.2rem; /* Box height */
+    background-color: #0563aa65; /* Background color */
+    color: white; /* Text color */
+    text-align: center;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    padding: 5px; /* Margin around the box */
+    font-family: Arial, sans-serif; /* Font */
+    margin-right: 3rem;
+    margin-left: 3rem;
+  }
+  
+  .inputbox:hover {
+    background-color: #0861afcc; /* Darker green on hover */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  .team-card button {
+    width: auto;
+    width: 1.875;
+    height: 1.875;
+  }
+  
+  /* main card */
+  .team-card {
+    width: 90%;
+    height: 20%;
+    background-color: #e32b28;
+    border-radius: 10%;
+    box-shadow: 0 4px 8px rgba(188, 86, 12, 0.353);
+    color: #000000;
+    padding: 2px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1em;
+    font-family: sans-serif;
+    border: 10px dotted #ff0;
+    transition: box-shadow 0.3s ease-in-out;
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.8);
+  }
+  
+  /* Glow on hover */
+  .card:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 0, 1), 0 0 40px rgba(255, 223, 0, 0.7);
+  }
+  
+  /* Style for wrong answer buttons */
+  .wrong-answer-buttons {
+    margin-top: 20px;
+  }
+  
+  .wrong-answer-buttons button {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    border-radius: 30%;
+  }
+  
+  /* Styles for clicked wrong answer button */
+  .wrong {
+    background-color: rgba(255, 0, 0, 0.7);
+    color: white;
+    pointer-events: none; /* Disable further clicks */
+  }
+  
+  /* From Uiverse.io by PriyanshuGupta28 */
+  .pushable {
+    position: relative;
+    background: transparent;
+    padding: 0px;
+    border: none;
+    cursor: pointer;
+    outline-offset: 4px;
+    outline-color: deeppink;
+    transition: filter 250ms;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  
+  .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: hsl(226, 25%, 69%);
+    border-radius: 8px;
+    filter: blur(2px);
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+  }
+  
+  .edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    background: linear-gradient(
+      to right,
+      hsl(248, 39%, 39%) 0%,
+      hsl(248, 39%, 49%) 8%,
+      hsl(248, 39%, 39%) 92%,
+      hsl(248, 39%, 29%) 100%
+    );
+  }
+  
+  .front {
+    display: block;
+    position: relative;
+    border-radius: 8px;
+    background: hsl(248, 53%, 58%);
+    padding: 16px 32px;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 1rem;
+    transform: translateY(-4px);
+    transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+  }
+  
+  .pushable:hover {
+    filter: brightness(110%);
+  }
+  
+  .pushable:hover .front {
+    transform: translateY(-6px);
+    transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+  }
+  
+  .pushable:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+  }
+  
+  .pushable:hover .shadow {
+    transform: translateY(4px);
+    transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+  }
+  
+  .pushable:active .shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+  }
+  
+  .pushable:focus:not(:focus-visible) {
+    outline: none;
+  }
+  
+  .pushables {
+    position: relative;
+    background: transparent;
+    padding: 0px;
+    border: none;
+    cursor: pointer;
+    outline-offset: 4px;
+    outline-color: deeppink;
+    transition: filter 250ms;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  
+  .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: hsl(226, 25%, 69%);
+    border-radius: 8px;
+    filter: blur(2px);
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+  }
+  
+  .edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    background: linear-gradient(
+      to right,
+      hsl(248, 39%, 39%) 0%,
+      hsl(248, 39%, 49%) 8%,
+      hsl(248, 39%, 39%) 92%,
+      hsl(248, 39%, 29%) 100%
+    );
+  }
+  
+  .front {
+    display: block;
+    position: relative;
+    border-radius: 8px;
+    background: hsl(248, 53%, 58%);
+    padding: 16px 32px;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 1rem;
+    transform: translateY(-4px);
+    transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+  }
+  
+  .pushables:hover {
+    filter: brightness(110%);
+  }
+  
+  .pushables:hover .front {
+    transform: translateY(-6px);
+    transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+  }
+  
+  .pushables:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+  }
+  
+  .pushables:hover .shadow {
+    transform: translateY(4px);
+    transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+  }
+  
+  .pushables:active .shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+  }
+  
+  .pushables:focus:not(:focus-visible) {
+    outline: none;
+  }
+  
+  /* Styling for Swiper slides */
+  .swiper-container {
+    width: 100%;
+    max-width: 600px;
+    height: 94%;
+    background-color: #ffbc00; /* Change to your preferred color */
+    box-shadow: 0 0 15px rgba(255, 188, 0, 0.8); /* Adds a glowing effect */
+    transition: box-shadow 0.3s ease-in-out;
+    border-radius: 5%;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-weight: 800;
+    color: #000000d0;
+  
+    /* Smooth transition for glow effect */
+  }
+  
+  .swiper-container:hover {
+    box-shadow: 0 0 25px rgba(255, 188, 0, 1); /* Stronger glow on hover */
+  }
+  
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .swiper-slide h6 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .flippable-card {
+    perspective: 1000px;
+  }
+  
+  .flippable-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+  
+  .flippable-card.flipped .flippable-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front,
+  .card-back {
+    position: absolute;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .card-back {
+    transform: rotateY(180deg);
+  }
+  .swiper-container {
+    width: 100%;
+    max-width: 600px;
+  }
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .swiper-slide h6 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  .card-back {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  /* Style for Flippable Cards */
+  .flippable-card {
+    perspective: 1000px;
+    cursor: pointer;
+    width: 190px;
+    height: 70px;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .flippable-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+  
+  .flippable-card.flipped .flippable-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Front and Back Face of Flippable Cards */
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1em;
+    border-radius: 1.9em;
+    backface-visibility: hidden;
+  }
+  
+  .card-front {
+    background-color: #ffbc00;
+    color: #fff;
+  }
+  
+  .card-back {
+    background-color: #ff0058;
+    color: #fff;
+    transform: rotateY(180deg);
+  }
+  
+  /* Hover effect for Flippable Card */
+  .flippable-card:hover {
+    transform: translateY(-10px);
+  }
+  img {
+    width: 17rem;
+    height: 17rem;
+  }
+  .timer-container {
+    text-align: center;
+    color: rgb(244, 243, 239);
+    height: 6%;
+  }
+  .timer {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+  .button-container button {
+    font-size: 1em;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  .button-container button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  @import url("https://fonts.cdnfonts.com/css/venite-adoremus?styles=172794,172795");
+  

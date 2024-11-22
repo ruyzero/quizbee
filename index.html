@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Family Feud</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/transition-style" />
+  </head>
+
+  <body>
+    <div class="front">
+      <a href="game.html">
+        <button id="btn">START</button>
+      </a>
+      <video class="vid" autoplay muted loop>
+        <source src="family.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <audio controls loop autoplay hidden>
+      <source src="song.mp3" />
+    </audio>
+    <div transition-style="in:circle:bottom-right">
+      A transitioned IN element
+    </div>
+
+    <div transition-style="out:wipe:down">A transitioned OUT element</div>
+  </body>
+</html>
